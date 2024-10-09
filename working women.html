@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Layout</title>
+    <style>
+        /* Overall body styling with blue background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #007bff; /* Blue background */
+            color: rgb(1, 6, 29); /* White text for better contrast */
+        }
+
+        /* Header with logo on the left and buttons on the right */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #54e780; /* Darker blue for the header */
+            padding: 10px 20px;
+            border-bottom: 2px solid white;
+        }
+
+        /* Logo on the left */
+        .logo {
+            width: 100px; /* Adjust the logo size */
+            height: auto;
+        }
+
+        /* Buttons on the right */
+        .buttons {
+            display: flex;
+            gap: 10px; /* Space between buttons */
+        }
+
+        .buttons button {
+            padding: 10px 15px;
+            background-color: #28a745; /* Green buttons */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        /* Main section with content */
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Flexbox layout for heading, information, image, and points */
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Left and right sections inside the content */
+        .left-content, .right-content {
+            width: 45%; /* Take up 45% width each */
+        }
+
+        /* Style the image */
+        .right-content img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            
+            border-radius: 10px;
+        }
+
+        /* Styling for the list of points */
+        .points {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 75%;
+            border-collapse: collapse;
+            background-color: #8d79e6; /* White background for the table */
+            color: #030113; /* Black text for the table */
+        }
+
+        table, th, td {
+            border: 1px solid #700909;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #cccccc; /* Light grey background for table header */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section with logo and buttons -->
+    <div class="header">
+        <!-- Logo on the left -->
+        <img src="C:\Users\SAI\Desktop\she\123.png" width="250" height="100" class="logo">
+
+        <div class="buttons">
+            <button class="button" onclick="location.href='index.html'">Home</button>
+            <button class="button" onclick="location.href='girl child.html'">Girl</button>
+            <button class="button" onclick="location.href='primigravida.html'">Primigravida</button>
+            <button class="button" onclick="location.href='working women.html'">Working Women</button>
+            <button class="button" onclick="location.href='happy mother.html'">Happy mother</button>
+            <button class="button" onclick="location.href='housewives.html'">Housewives</button>
+            <button class="button" onclick="location.href='yoga.html'">Yoga</button>
+            <button class="button" onclick="location.href='progress tracker.html'">Progress Tracker</button>
+            
+           
+           
+        </div>
+    </div>
+
+    <!-- Main content section -->
+    <div class="main-content">
+        <!-- Heading and information -->
+        <h1>Girl Child</h1>
+        
+        <p><Justify>Working women face unique challenges when it comes to nutrition. Balancing work, family, and personal health can be tough. healthy and balanced diet is essential for working women to maintain energy levels, manage stress, and stay productive throughout the day. Given the demands of modern work life, a nutrient-rich diet can help boost mental and physical well-being, support focus, and prevent burnout.
+            .</Justify></p>
+                        
+        <!-- Flexbox layout for points and image -->
+        <div class="content-section">
+            <!-- Left side with points -->
+            <div class="left-content"><br><br>
+                <h2>Nutritional Needs for the Girl Child</h2>
+                <ul class="points">
+                    <li>Meal prep on weekends for busy weekdays.</li><BR>
+                    <li>Stay hydrated throughout the day.</li><BR>
+                    <li>Include a variety of fruits and vegetables in your diet.</li><BR>
+                    <li>Choose whole grains over refined ones.</li><BR>
+                    <li>Snack smart with nuts, yogurt, or fruit</li><BR>
+                    <LI>Educate about healthy eating habits</LI><BR>
+                    <LI>Encourage the intake of roughage and dietary fiber.</LI><BR>
+                    <LI>Limit starchy foods.</LI><BR>
+                    <LI>Provide a limited amount of fats and carbohydrates.</LI><br>
+                    <LI>Drink enough water.</LI><br>
+                    <LI>Eat balanced diet.</LI><br>
+                    <LI>Have you dinner before 7:00Pm in the evening</LI><br>
+                    <LI>Sleep @9:00 pm every day.</LI><br>
+                    <LI>Maintain regular timings to intake your food</LI><br>
+                </ul>
+            </div>
+
+            <!-- Right side with image -->
+            <div class="right-content"><br>
+                
+                <img src="C:\Users\SAI\Desktop\she\workwomen.png" width="250" height="50">
+            </div>
+        </div>
+        <P>Physical Exercise is compulsory for proper growth and fitness. For working women, balancing a nutrient-rich diet and consistent exercise routine can drastically improve energy levels, mental clarity, and overall well-being. By focusing on whole foods, maintaining hydration, and incorporating regular physical activity, it's easier to manage the stresses of work life while maintaining health and vitality. </P>
+        <center><img src="C:\Users\SAI\Desktop\she\exercise.jpg" width="800" height="500" >
+
+        <!-- Table with 2 columns and 6 rows -->
+        <h2>Diet Table From Monday To Saturday</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><center>Day</center></th>
+                    <th><center>Diet Plan</center></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Stir-fried tofu and vegetables with a side of brown rice or quinoa. </td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Baked salmon with steamed broccoli, roasted sweet potatoes, and a green salad with olive oil.</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Scrambled eggs on whole wheat toast with avocado slices and a glass of low-fat milk or almond milk.</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Fruit with Cottage Cheese: Adds protein and a dose of calcium.</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Vegetables: Include a variety of cooked or raw vegetables for fiber and vitamins. </td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>BOatmeal topped with fresh berries, chia seeds, and a spoonful of almond butter.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <P> 
+        <ol><b>
+            Foods to Avoid: </b>
+       <b> Some foods can lead to fatigue, lack of concentration, and poor health over time. Limit these foods for the sake of our Health :</ol></b>
+        
+        <li>Sugary Snacks and Drinks
+    <li> Sugary foods can cause energy spikes followed by crashes.
+        <img src="C:\Users\SAI\Desktop\she\working women.jpg" width="250" height="150">
+       <li> Refined Carbohydrates: White bread, pastries, and sugary cereals can cause rapid fluctuations in blood sugar levels.
+       <li>  Processed Foods: Pre-packaged or fast foods are often high in unhealthy fats, sodium, and preservatives, leading to bloating and low energy.
+        <li> Caffeine Overload: While a cup of coffee or tea can boost energy, excessive caffeine intake can lead to jitters, anxiety, and sleep disruption.. </P>
+        </ol>
+</body>
+</html>

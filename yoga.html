@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Layout</title>
+    <style>
+        /* Overall body styling with blue background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text for better contrast */
+        }
+
+        /* Header with logo on the left and buttons on the right */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #54e780; /* Darker blue for the header */
+            padding: 10px 20px;
+            border-bottom: 2px solid white;
+        }
+
+        /* Logo on the left */
+        .logo {
+            width: 100px; /* Adjust the logo size */
+            height: auto;
+        }
+
+        /* Buttons on the right */
+        .buttons {
+            display: flex;
+            gap: 10px; /* Space between buttons */
+        }
+
+        .buttons button {
+            padding: 10px 15px;
+            background-color: #28a745; /* Green buttons */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        /* Main section with content */
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Flexbox layout for heading, information, image, and points */
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Left and right sections inside the content */
+        .left-content, .right-content {
+            width: 45%; /* Take up 45% width each */
+        }
+
+        /* Style the image */
+        .right-content img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            
+            border-radius: 10px;
+        }
+        /* Style the image */
+        .right-content img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            
+            border-radius: 10px;
+        }
+        /* Style the image */
+        .right-content img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            
+            border-radius: 10px;
+        }
+        .right-content text  {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            
+            border-radius: 10px;
+
+        /* Styling for the list of points */
+        .points {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+       
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            max-width: 1200px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff;
+            max-width: 1200px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-content {
+            width: 45%;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            width: 50%;
+        }
+
+        .text-content h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .text-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;  }
+    </style>
+</head>
+<body>
+
+    <!-- Header section with logo and buttons -->
+    <div class="header">
+        <!-- Logo on the left -->
+        <img src="C:\Users\SAI\Desktop\she\123.png" width="250" height="100" class="logo">
+
+        <div class="buttons">
+            <button class="button" onclick="location.href='index.html'">Home</button>
+            <button class="button" onclick="location.href='girl child.html'">Girl</button>
+            <button class="button" onclick="location.href='primigravida.html'">Primigravida</button>
+            <button class="button" onclick="location.href='working women.html'">Working Women</button>
+            <button class="button" onclick="location.href='happy mother.html'">Happy mother</button>
+            <button class="button" onclick="location.href='housewives.html'">Housewives</button>
+            <button class="button" onclick="location.href='yoga.html'">Yoga</button>
+            <button class="button" onclick="location.href='progress tracker.html'">Progress Tracker</button>
+            
+           
+           
+        </div>
+    </div>
+
+    <!-- Main content section -->
+    <div class="main-content">
+        <!-- Heading and information -->
+        <h1>Understanding Yoga</h1>
+        
+        <p><Justify>Yoga is a practice that connects the body, breath, and mind. It uses physical postures, breathing exercises, and meditation to improve overall health. Yoga was developed as a spiritual practice thousands of years ago.          
+              <CENTER><img src="C:\Users\SAI\Desktop\she\yoga1.png" width="650" height="350"></CENTER><br> <br> 
+
+        <!-- Flexbox layout for points and image -->
+        <div class="content-section">
+            <!-- Left side with points -->
+            <div class="left-content"><br><br>
+                <h2>Yoga Poses for Different Groups</h2>
+                <ul class="points">
+                    <li><b> Pregnant Women</b>></li><BR>
+                    <li>Cat-Cow Stretch: Helps relieve back pain.<br><br><br>
+                    <li>Child's Pose: A restful position that can ease tension.<br><br><br>
+                    <li>Seated Forward Bend: A gentle stretch for the lower back.<br><br><br>
+                    <li>ide-Lying Positions: Great for relaxation and stability.<br><br>
+                        </li><BR>
+                    
+            </div>
+
+            <!-- Right side with image -->
+            <div class="right-content"></div>
+                
+                <img src="C:\Users\SAI\Desktop\she\sleep1.png" width="450" height="350" "Right Image">
+            </div>
+        </div>
+        <div></div>
+    </div>
+
+    <!-- Right side with image -->
+    <div class="right-content">
+               <img src= "C:\Users\SAI\Desktop\she\girl exercise.png" width="450" height="350" "Right Image" >
+             
+                    </div> 
+                </div>
+                <div>           </div>
+                <ul>
+            <right></right><li><b> Girl Children </b></li><BR>
+              <li>Tree Pose: Enhances balance and concentration.<br><br><br>
+              <li>Butterfly Pose: Opens the hips and improves flexibility.<br><br><br>
+              <li>Cobra Pose: Strengthens the spine and opens the chest.<br><br><br>
+              <li>Warrior I: Builds strength and confidence<br><br>
+                  </li><BR></li></li>
+            
+             
+        </div>
+    </div>
+
+</div>
+
+<!-- Right side with image -->
+<div class="right-content"></div>
+    
+   <center><img src="C:\Users\SAI\Desktop\she\vrishabasana.png" width="450" height="350"></center> 
+</div>
+</div>
+<div></div>
+</div>
+<center><b> Working Women</b><BR><br>
+    Desk Stretch: Relieves tension from sitting for long periods<br><br><br>
+    Chair Pose: Strengthens the legs and improves posture<br><br><br>
+    Neck Rolls: Releases neck tension and improves circulation..<br><br><br>
+    Reclined Bound Angle Pose: A restorative pose to relieve stress.<br><br>
+        </li><BR></li></center>
+<div></div>
+<!-- Right side with image -->
+<div class="right-content"></div>
+    
+   <img src="C:\Users\SAI\Desktop\she\bridge.png" width="450" height="350" "Right Image">
+</div>
+</div>
+<div></div>
+</div>
+<b> House Wives</b><BR><br>
+    ●	Downward-Facing Dog: Strengthens the whole body and energizes.<br><br>
+    ●	Bridge Pose: Opens the chest and stretches the spine.<br><br>
+    ●	Pigeon Pose: Opens the hips and relieves lower back pain.<br><br>
+    ●	Legs-Up-the-Wall Pose: Promotes relaxation and reduces fatigue.<br><br>
+
+        </li><BR></li>
+<div></div>
+</body>
+</html>

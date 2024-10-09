@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weekly fitness progress tracker for women.">
+    <title>Weekly Progress Tracker</title>
+    <style>
+        body {
+            background-color: #3ed4e7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-width: 150px;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;        
+            right: 20px;      
+            display: flex;    
+            gap: 10px;        
+        }
+        h1 {
+            color: #2c3e50;
+            margin-top: 120px;
+        }
+        .tracker {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 800px;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .progress-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px auto; /* Adjusted margin */
+        }
+        .progress-table th, .progress-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .progress-table th {
+            background-color: #0056b3;
+            color: white;
+        }
+        .button {
+            background-color: #0056b3;
+            color: rgb(255, 230, 7);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #14f51f;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        .input-field {
+            margin-right: 5px;
+            padding: 8px;
+        }
+        /* Styles for the chart */
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px auto; /* Adjusted margin */
+        }
+        #myChart {
+            max-width: 800px;
+            height: 400px;
+        }
+    </style>
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="header">
+        <img src="C:\Users\SAI\Desktop\she\123.png" alt="Logo" class="logo">
+        <div class="button-container">
+            <button class="button" onclick="location.href='index.html'">Home</button>
+            <button class="button" onclick="location.href='girl child.html'">Girl</button>
+            <button class="button" onclick="location.href='primigraida.html'">Primigravida</button>
+            <button class="button" onclick="location.href='working women.html'">Working Women</button>
+            <button class="button" onclick="location.href='purpera.html'">Purpera</button>
+            <button class="button" onclick="location.href='housewives.html'">Housewives</button>
+            <button class="button" onclick="location.href='yoga.html'">Yoga</button>
+            <button class="button" onclick="location.href='progress tracker.html'">Progress Tracker</button>
+            
+        </div>
+    </div>
+
+    <div class="tracker">
+        <h2>Weekly Fitness Progress Tracker</h2>
+        <p>Log your activities for each day of the week!</p>
+       
+        <div class="input-container">
+            <input type="text" id="day" placeholder="Day (e.g., Monday)" class="input-field" required>
+            <input type="text" id="activity" placeholder="Activity (e.g., Running)" class="input-field" required>
+            <input type="number" id="duration" placeholder="Duration (mins)" class="input-field" required>
+            <input type="number" id="calories" placeholder="Calories Burned" class="input-field" required>
+            <button class="button" onclick="addEntry()">Add Entry</button>
+        </div>
+
+        <table class="progress-table" id="progressTable">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                    <th>Duration (mins)</th>
+                    <th>Calories Burned</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Entries will be added here dynamically -->
+            </tbody>
+        </table>
+
+        <!-- Chart Container for Bar Chart -->
+        <h3>Calories and Duration Burned</h3>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        function addEntry() {
+            const day = document.getElementById('day').value;
+            const activity = document.getElementById('activity').value;
+            const duration = document.getElementById('duration').value;
+            const calories = document.getElementById('calories').value;
+
+            if (!day || !activity || !duration || !calories) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            const table = document.getElementById('progressTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            newRow.innerHTML = `
+                <td>${day}</td>
+                <td>${activity}</td>
+                <td>${duration}</td>
+                <td>${calories}</td>
+                <td><button class="button" onclick="deleteEntry(this)">Delete</button></td>
+            `;
+
+            // Clear input fields after adding entry
+            clearForm();
+
+            // Update the charts
+            updateChart();
+        }
+
+        function clearForm() {
+            document.getElementById('day').value = '';
+            document.getElementById('activity').value = '';
+            document.getElementById('duration').value = '';
+            document.getElementById('calories').value = '';
+        }
+
+        function deleteEntry(button) {
+            const row = button.parentElement.parentElement;
+            row.parentElement.removeChild(row);
+
+            // Update the charts
+            updateChart();
+        }
+
+        // Chart.js configuration for Bar Chart
+        const ctx = document.getElementById('myChart').getContext('2d');
+        let myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                datasets: [{
+                    label: 'Calories Burned',
+                    data: [0, 0, 0, 0, 0, 0, 0], // Initial data, will be updated later
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Duration (mins)',
+                    data: [0, 0, 0, 0, 0, 0, 0], // Initial data, will be updated later
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        function updateChart() {
+            const rows = document.querySelectorAll('#progressTable tbody tr');
+            const caloriesData = new Array(7).fill(0);
+            const durationData = new Array(7).fill(0);
+
+            rows.forEach(row => {
+                const dayIndex = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].indexOf(row.cells[0].innerText);
+                const calories = parseInt(row.cells[3].innerText);
+                const duration = parseInt(row.cells[2].innerText);
+
+                if (dayIndex !== -1) {
+                    caloriesData[dayIndex] += calories;
+                    durationData[dayIndex] += duration;
+                }
+            });
+
+            myChart.data.datasets[0].data = caloriesData;
+            myChart.data.datasets[1].data = durationData;
+            myChart.update();
+        }
+    </script>
+
+</body>
+</html>
+
+

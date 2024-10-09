@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Layout</title>
+    <style>
+        /* Overall body styling with blue background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #007bff; /* Blue background */
+            color: rgb(9, 15, 92); /* White text for better contrast */
+        }
+
+        /* Header with logo on the left and buttons on the right */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #54e780; /* Darker blue for the header */
+            padding: 10px 20px;
+            border-bottom: 2px solid white;
+        }
+
+        /* Logo on the left */
+        .logo {
+            width: 100px; /* Adjust the logo size */
+            height: auto;
+        }
+
+        /* Buttons on the right */
+        .buttons {
+            display: flex;
+            gap: 10px; /* Space between buttons */
+        }
+
+        .buttons button {
+            padding: 10px 15px;
+            background-color: #28a745; /* Green buttons */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        /* Main section with content */
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Flexbox layout for heading, information, image, and points */
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Left and right sections inside the content */
+        .left-content, .right-content {
+            width: 45%; /* Take up 45% width each */
+        }
+
+        /* Style the image */
+        .right-content img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            
+            border-radius: 10px;
+        }
+
+        /* Styling for the list of points */
+        .points {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 75%;
+            border-collapse: collapse;
+            background-color: #e68e1b; /* White background for the table */
+            color: #170b86; /* Black text for the table */
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #cccccc; /* Light grey background for table header */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header section with logo and buttons -->
+    <div class="header">
+        <!-- Logo on the left -->
+        <img src="C:\Users\SAI\Desktop\she\123.png" width="250" height="100" class="logo">
+
+        <div class="buttons">
+            <button class="button" onclick="location.href='index.html'">Home</button>
+            <button class="button" onclick="location.href='girl child.html'">Girl</button>
+            <button class="button" onclick="location.href='primigravida.html'">Primigravida</button>
+            <button class="button" onclick="location.href='working women.html'">Working Women</button>
+            <button class="button" onclick="location.href='happy mother.html'">Happy mother</button>
+            <button class="button" onclick="location.href='housewives.html'">Housewives</button>
+            <button class="button" onclick="location.href='yoga.html'">Yoga</button>
+            <button class="button" onclick="location.href='progress tracker.html'">Progress Tracker</button>
+            
+           
+           
+        </div>
+    </div>
+
+    <!-- Main content section -->
+    <div class="main-content">
+        <!-- Heading and information -->
+        <h1>Home Maker</h1>
+        
+        <p><Justify>Housewives often have busy, dynamic schedules filled with household responsibilities, family care, and sometimes outside work. It’s essential for housewives to maintain their health, energy, and well-being with a balanced diet and regular exercise. A well-planned diet can help prevent fatigue, promote a healthy weight, and reduce stress, while exercise supports both physical and mental health.A balanced diet provides sustained energy throughout the day, supports mental well-being, and helps manage household tasks more efficiently. The focus should be on nutrient-dense, whole foods that offer a balance of carbohydrates, proteins, healthy fats, vitamins, and minerals.</Justify></p>
+            <CENTER><img src="C:\Users\SAI\Desktop\she\download2.png" width="550" height="350"></CENTER>
+            
+        <!-- Flexbox layout for points and image -->
+        <div class="content-section">
+            <!-- Left side with points -->
+            <div class="left-content"><br><br>
+                <h2><b></b>Key Tips for Success</h2></div>
+                <ul class="points">
+                    <li>Consistency: Stay consistent with both diet and exercise to see long-term benefits.</li><BR>
+                    <li>Portion Control: Even with healthy foods, practicing portion control helps with weight management.</li><BR>
+                    <li>Incorporate Movement: Make time for movement during the day, even if it’s through housework or walking..</li><BR>
+                    <li>Rest and Recovery: Make sure to get adequate sleep to support overall health.
+                    </li><BR>
+                    
+                </ul>
+            </div>
+
+            <!-- Right side with image -->
+            <div class="right-content">
+                
+                <img src="C:\Users\SAI\Desktop\she\e1.png" width="10" height="10" >
+            </div>
+        </div>
+        <P><center><b>Physical Exercise is compulsory for proper growth and fitness for all the age groups </b></center> </P>
+        <center><img src="C:\Users\SAI\Desktop\she\hwomene.png" width="550" height="350" ></center>
+        <P><center><b>By following a balanced diet and incorporating regular exercise, housewives can maintain their energy levels, manage stress better, and stay physically fit, all while managing their day-to-day responsibilities. </b></center> </P>
+</body>
+</html>
